@@ -1,0 +1,38 @@
+.btn-custom {
+    display: flex;
+    align-items: center;
+    margin: 1px;
+    max-width: 100%;
+}
+
+.icon-white {
+    color: white;
+}
+
+.list-group-item {
+    display: flex;
+    align-items: center;
+}
+
+.icon-grey {
+    margin: 1px 2px 1px 1px;
+    color: grey;
+}
+
+.right-align-icons {
+    margin-left: auto;
+}
+
+.indent {
+    margin-left: 20px;
+}
+
+.btn-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.custom-btn-width {
+    width: 100px; 
+}
