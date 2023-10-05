@@ -1,133 +1,180 @@
-<table  width="100%">
-    <tr>
-        <td valign="top">
-            <ul>
-                <li><a href="/Kanbas/Account/Profile/screen.html">Account</a></li>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="/Kanbas/Courses/Home/screen.html">Courses</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Inbox</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Studio</a></li>
-                <li><a href="#">Commons</a></li>
-                <li><a href="#">Help</a></li>
+<html>
+  <head>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/KanbasNavigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/CourseNavigation/index.css" />
+    <link rel="stylesheet" href="../../../lib/font-awesome/css/all.min.css"/>
+    <link rel="stylesheet" href="../../../lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/Settings/index.css" />
 
-            </ul>
-        </td>
-        <td valign="top">
-            <ul>
-                <li><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
-                <li><a href="/Kanbas/Courses/Home/screen.html">Modules</a></li>
-                <li><a href="#">Piazza</a></li>
-                <li><a href="#">Zoom Meetings</a></li>
-                <li><a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a></li>
-                <li><a href="#">Quizzes</a></li>
-                <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
-                <li><a href="#">People</a></li>
-                <li><a href="#">Panto Video</a></li>
-                <li><a href="#">Discussions</a></li>
-                <li><a href="#">Announcements</a></li>
-                <li><a href="#">Pages</a></li>
-                <li><a href="#">Files</a></li>
-                <li><a href="#">Rubrics</a></li>
-                <li><a href="#">Outcomes</a></li>
-                <li><a href="#">Collaborations</a></li>
-                <li><a href="#">Syllabus</a></li>
-                <li><a href="/Kanbas/Courses/Settings/courseDetails.html">Settings</a></li>
-            </ul>
-        </td>
+  </head>
+  <body>
+    <div class="d-block d-md-none">
+      <a href="/Kanbas/KanbasNavigation">Kanbas Navigator</a>
+      <a href="/Kanbas/Courses/CourseNavigation">Course Navigator</a>
+    </div>
+    <div class="wd-flex-row-container">
+      <div class="wd-bg-color-black d-none d-md-block">
+        <ul class="wd-kanbas-navigation">
+          <li>
+            <a href="/Kanbas/Account/screen.html">
+              <i class="fas fa-user"></i>
+              Account
+            </a>
+          </li>
+          <li>
+            <a href="/Kanbas/Dashboard/screen.html">
+              <i class="fas fa-tachometer-alt"></i>
+              Dashboard
+            </a>
+          </li>
+          <li class="wd-active">
+            <a href="/Kanbas/Courses/Home/screen.html">
+              <i class="fas fa-book"></i>
+              Courses
+            </a>
+          </li>
+          <li>
+            <a href="/Kanbas/Calendar/screen.html">
+              <i class="fas fa-calendar-alt"></i>
+              Calendar
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-envelope"></i>
+              Inbox
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-history"></i>
+              History
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-palette"></i>
+              Studio
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-users"></i>
+              Commons
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-question-circle"></i>
+              Help
+            </a>
+          </li>
+        </ul>
+      </div>
 
-        <td>
-            <ul>
-                <li><a href="/Kanbas/Courses/Settings/courseDetails.html">Course Details</a></li>
-                <li><a href="#">Sections</a></li>
-                <li><a href="/Kanbas/Courses/Settings/NavigationScreen.html">Navigation</a></li>
-                <li><a href="#">Apps</a></li>
-                <li><a href="#">Feature Options</a></li>
-                <li><a href="#">Integrations</a></li>
-            </ul>
-        </td>
+      <div>
+        <ul class="wd-course-navigation">
+          <li><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
+          <li><a href="/Kanbas/Courses/Modules/screen.html">Modules</a></li>
+          <li><a href="#">Piazza</a></li>
+          <li><a href="#">Zoom Meetings</a></li>
+          <li><a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a>
+          </li>
+          <li><a href="#">Quizzes</a></li>
+          <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
+          <li><a href="#">People</a></li>
+          <li><a href="#">Panopto Video</a></li>
+          <li><a href="#">Discussions</a></li>
+          <li><a href="#">Announcements</a></li>
+          <li><a href="#">Pages</a></li>
+          <li><a href="#">Files</a></li>
+          <li><a href="#">Rubrics</a></li>
+          <li><a href="#">Outcomes</a></li>
+          <li><a href="#">Collaborations</a></li>
+          <li><a href="#">Syllabus</a></li>
+          <li class="wd-active"><a href="/Kanbas/Courses/Settings/courseDetails.html">Settings</a></li>
+        </ul>
+      </div>
 
-            <h1>Course Details</h1>
-            <table>
-                <label><h4>Image:</h4>
-                </label>
-                <button>Choose Image</button>
-                <br>
 
-                <tr valign="top">
-                <td><h4>Name:</h4>
-                    </td>
-                    <td>
-                    <p>CS5610 11550 Web Development SEC 01 Fall 2023</p>
-                    </td>
-                </tr>
+      <div class="container">
+        <ul class="tabs">
+            <li><a href="/Kanbas/Courses/Settings/courseDetails.html">Course Details</a></li>
+            <li><a href="#">Section</a></li>
+            <li><a href="/Kanbas/Courses/Settings/NavigationScreen.html">Navigation</a></li>
+            <li><a href="#">Apps</a></li>
+            <li><a href="#">Feature Options</a></li>
+            <li><a href="#">Integrations</a></li>
+        </ul>
 
-                <tr valign="top">
-                <td><h4>Course Code:</h4></td>
-                <td><p>CS5610.11550.202410</p>
-                </td>
-                </tr>
+    <div class="course-details-container">
+        <h1>Course Details</h1>
+        
+        <div class="detail-item">
+            <label for="course-image"><h4>Image:</h4></label>
+            <button id="course-image">Choose Image</button>
+        </div>
+    
+        <div class="detail-item">
+            <h4>Name:</h4>
+            <p>CS5610 11550 Web Development SEC 01 Fall 2023</p>
+        </div>
+    
+        <div class="detail-item">
+            <h4>Course Code:</h4>
+            <p>CS5610.11550.202410</p>
+        </div>
+    
+        <div class="detail-item">
+            <h4>Blueprint Course:</h4>
+            <p>No</p>
+        </div>
+    
+        <div class="detail-item">
+            <h4>Course Template:</h4>
+            <input type="checkbox"> Enable course as a Course Template
+        </div>
+    
+        <div class="detail-item">
+            <h4>Time Zone:</h4>
+            <select>
+                <option>Eastern Time (US & Canada)(-5:00/-04:00)</option>
+            </select>
+        </div>
+    
+        <div class="detail-item">
+            <h4>SIS ID:</h4>
+            <p>CS5610.11550.202410</p>
+        </div>
+    
+        <div class="detail-item">
+            <h4>Subaccount:</h4>
+            <a href="#">CS grad</a>
+        </div>
+    
+        <div class="detail-item">
+            <h4>Term:</h4>
+            <p>202410_1 Fall 2023 Semester Full Term</p>
+        </div>
+    
+        <div class="detail-item">
+            <h4>Participation:</h4>
+            <select>
+                <option>Term</option>
+            </select>
+            <p>Course participation is limited to term start and end dates</p>
+            <h4>Start</h4>
+            <input type="date">
+            <h4>End</h4>
+            <input type="date">
+            <input type="checkbox"> Restrict students from viewing course before term start date
+            <input type="checkbox"> Restrict students from viewing course after term end date
+        </div>
+    </div>
+    
+    
 
-                <tr valign="top">
-                <td><h4>Blueprint Course:</h4></td>
-                <td><p>No</p>
-                </td>
-                </tr>
-
-                <tr valign="top">
-                    <td><h4>Course Template</h4>
-                    </td>
-                    <td><input type="checkbox">Enable course as a Course Template</input></td>
-                </tr>
-
-                <tr valign="top">
-                <td><h4>Time Zone:</h4>
-                </td>
-                </tr>
-
-                <tr valign="top">
-                <td><select>
-                    <option>Eastern Time (US & Canada)(-5:00/-04:00)</option>
-                </select>
-                </td>
-                </tr>
-
-                <tr valign="top">
-                    <td><h4>SIS ID:</h4></td>
-                    <td><p>CS5610.11550.202410</p>
-                    </td>
-                </tr>
-
-                <tr valign="top">
-                    <td><h4>Subaccount:</h4>
-                    </td>
-                    <td><a href="#">CS grad</a>
-                    </td>
-                </tr>
-
-                <tr valign="top">
-                    <td><h4>Term:</h4>
-                    </td>
-                    <td><p>202410_1 Fall 2023 Semester Full Term</p>
-                    </td>
-                </tr>
-
-                <tr valign="top">
-                    <td><h4>Participation:</h4>
-                    </td>
-                    <td>
-                        <select><option>Term</option>
-                        </select>
-                        <p>Course participation is limited to term start and end dates</p>
-                        <h4>Start</h4>
-                        <input type="date"></input>
-                        <h4>End</h4>
-                        <input type="date"></input><br>
-                        <input type="checkbox">Restrict students from viewing course before term start date</input>
-                        <input type="checkbox">Restrict students from viewing course after term end date</input>
-                    </td>
-                </tr>
 
                 <tr valign="top">
                     <td><h4>Default due time:</h4>
@@ -239,15 +286,13 @@
         </td>
     </tr>
 
-    <tr align="right">
-        <td>
+   <div class="detail-item">
+            <h4>Descriptions:</h4>
+            <textarea cols="40" rows="10"></textarea>
+            <a href="#">more options</a>
+        </div>
 
-        </td>
-        <td>
-            <button>Update Course Details</button>
-        </td>
-    </tr>
-            </table>
-    </td>
-    </tr>
-</table>
+        <button>Update Course Details</button>
+
+    </div>
+</div>
