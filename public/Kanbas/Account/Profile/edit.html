@@ -1,94 +1,174 @@
-<table  width="100%">
-    <tr>
-        <td valign="top">
-            <ul>
-                <li><a href="/Kanbas/Account/Profile/screen.html">Account</a></li>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="/Kanbas/Courses/Home/screen.html">Courses</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Inbox</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Studio</a></li>
-                <li><a href="#">Commons</a></li>
-                <li><a href="#">Help</a></li>
+<html>
+  <head>
+    <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/Kanbas/KanbasNavigation/index.css" />
+    <link rel="stylesheet" href="/Kanbas/Courses/CourseNavigation/index.css" />
+    <link rel="stylesheet" href="../../../lib/font-awesome/css/all.min.css"/>
+    <link rel="stylesheet" href="../../../lib/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/Kanbas/Account/screen.css"/>
+  </head>
+  <body>
+    <div class="d-block d-md-none">
+      <a href="/Kanbas/KanbasNavigation">Kanbas Navigator</a>
+      <a href="/Kanbas/Courses/CourseNavigation">Course Navigator</a>
+    </div>
+    <div class="wd-flex-row-container">
+      <div class="wd-bg-color-black d-none d-md-block">
+        <ul class="wd-kanbas-navigation">
+          <li class="wd-active">
+            <a href="/Kanbas/Account/screen.html">
+              <i class="fas fa-user"></i>
+              Account
+            </a>
+          </li>
+          <li>
+            <a href="/Kanbas/Dashboard/screen.html">
+              <i class="fas fa-tachometer-alt"></i>
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="/Kanbas/Courses/Home/screen.html">
+              <i class="fas fa-book"></i>
+              Courses
+            </a>
+          </li>
+          <li>
+            <a href="/Kanbas/Calendar/screen.html">
+              <i class="fas fa-calendar-alt"></i>
+              Calendar
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-envelope"></i>
+              Inbox
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-history"></i>
+              History
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-palette"></i>
+              Studio
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-users"></i>
+              Commons
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class="fas fa-question-circle"></i>
+              Help
+            </a>
+          </li>
+        </ul>
+      </div>
 
-            </ul>
-        </td>
-        <td valign="top">
-            <ul>
-                <li><a href="/Kanbas/Courses/Home/screen.html">Home</a></li>
-                <li><a href="/Kanbas/Courses/Home/screen.html">Modules</a></li>
-                <li><a href="#">Piazza</a></li>
-                <li><a href="#">Zoom Meetings</a></li>
-                <li><a href="/Kanbas/Courses/Assignments/screen.html">Assignments</a></li>
-                <li><a href="#">Quizzes</a></li>
-                <li><a href="/Kanbas/Courses/Grades/screen.html">Grades</a></li>
-                <li><a href="#">People</a></li>
-                <li><a href="#">Panto Video</a></li>
-                <li><a href="#">Discussions</a></li>
-                <li><a href="#">Announcements</a></li>
-                <li><a href="#">Pages</a></li>
-                <li><a href="#">Files</a></li>
-                <li><a href="#">Rubrics</a></li>
-                <li><a href="#">Outcomes</a></li>
-                <li><a href="#">Collaborations</a></li>
-                <li><a href="#">Syllabus</a></li>
-                <li><a href="/Kanbas/Courses/Settings/courseDetails.html">Settings</a></li>
-            </ul>
-        </td>
+      <div>
+        <ul class="wd-course-navigation d-none d-md-block">
+          <li><a href="#">Notification</a></li>
+          <li class="wd-active"><a href="/Kanbas/Account/screen.html">Profiles</a></li>
+          <li><a href="#">Files</a></li>
+          <li><a href="#">Settings</a></li>
+          <li><a href="#">ePortfolios</a></li>
+          <li><a href="#">Shared Content</a></li>
+          <li><a href="#">The Hub</a></li>
+          <li><a href="#">Quickly Course Tools</a></li>
+          <li><a href="#">Global Announcements</a></li>
+        </ul>
+      </div>
 
-        <td valign="top">
-            <h2>Wenxi Zhang</h2>
-            <label>Name:* </label>
-            <input type="text" value="Wenxi Zhang">
-            <label>Pronouns: </label>
-            <select>
+      <div class="col-md-8">
+        <div class="container">
+          <i class="edit-user-profile-icon fa fa-user fa-4x"></i><br>
+          <h3>Wenxi Zhang</h3>
+          <form action="../screen.html">
+            <div class="mb-3">
+              <label for="fullName" class="form-label">
+                Name:* </label>
+              <input type="text" class="form-control" id="fullName" value="">
+            </div>
+
+            <div class="mb-3">
+              <label for="pronoun-select" class="form-label">Prounouns:</label>
+              <select id="pronoun-select" class="form-select"> 
                 <option>None</option>
-                <option>He/Him/His</option>
-                <option>She/Her/Hers</option>
-                <option>They/Them/Theirs</option>
-            </select>
-            <br>
-            <label>Title: </label>
-            <input type="text">
+                <option>he/him</option>
+                <option>she/her</option>
+                <option>they/them</option>
+              </select>
+            </div>
+          
+            <div class="mb-3">
+              <label for="textarea1" class="form-label">
+                Title:</label>
+              <textarea class="form-control" id="textarea1" rows="3"></textarea>
+            </div>
+            <br />
 
-            <h3>Contact</h3>
-            No registered services, you can add some on the <a href="#">settings</a> page.
+            <div class="profile-edit-section">
+              <h3>Contact</h3>
+              <p>No registered services, you can add this on the <a href="#">settings</a> page.</p>
+            </div>
 
-            <h3>Biography</h3>
-            <textarea cols="30" rows="5">Faculty, Software Engineer, AI, Space, and renewables enthusiast.
-            </textarea>
+            <div class="profile-edit-section">
+              <h3>Biography</h3>
+              <textarea class="form-control" id="textarea1" rows="3"></textarea>
+            </div>
 
-            <h3>Links</h3>
-            <ul>
-                <li>
-                    <a href="#">YouTube</a>
-                </li>
-            </ul>
-            <table>
-                <thead>
-                <tr>
-                    <th>Title</th>
-                    <th></th>
-                    <th>URL</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td><input type="text" value="YouTube"></input></td>
-                    <td>&rarr;</td>
-                    <td><input type="text" value="https://www.youtube.com"></input></td>
-                    <td><a href="#">Remove</a></td>
-                </tr>
-                </tbody>
-            </table>
-            <button>Add another link</button>
-            <br>
-            <button>Cancel</button>
-            <button>Save Profile</button>
-            <br>
-            <button>Edit Profile</button>
-            <button>Cancel Editing</button>
-        </td>
-    </tr>
-</table>
+            <div class="profile-edit-section">
+              <h3>Links</h3>
+                  <ul>
+                    <li><a href="#">Youtube</a></li>
+                  </ul>
+                  <br>
+
+                  <div class="row">
+                    <div class="col-md-5">
+                        <div class="form-group">
+                            <label class="form-label" style="align-items: center" for="link-title">Text</label>
+                            <input class="form-control" type="text" id="link-title" value="youtube">
+                        </div>
+                    </div>
+                    <div class="col-md-1"><p>&rarr;</p></div>
+                    <div class="col-md-5">
+                        <div class="form-group">
+                          <label class="form-label" style="align-items: center" for="link-url">URL</label>
+                          <input class="form-control" type="text" id="link-url" value="https://youtube.com">
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                      <a href="#">Remove</a>
+                    </div>
+                  </div>
+                  <br>
+                  <button class="btn" style="background-color: lightgray; margin: 15px">Add another link</button><br>
+            </div>
+                  <hr>
+
+            <br />
+            
+            <button class="btn save-buttons" style="background-color: red; color: white;">Save Profile</button>
+            <button class="btn btn-secondary save-buttons">Cancel</button>
+          </form>
+        </div>
+      </div>
+      <div class="col-md-2">
+        <form action="../screen.html">
+          <button class="btn"><i class="fa fa-pencil-alt" style="margin: 5px;"></i>Cancel Editing</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
+    
