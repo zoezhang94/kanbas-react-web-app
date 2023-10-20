@@ -1,0 +1,17 @@
+/* Style for card */
+.card {
+    max-height: 280px;
+    max-width: 350px;
+}
+
+/* Style for card image */
+.card-img-top {
+    height: 156px;
+    object-fit: cover;
+}
+
+/* Style for card body */
+.card-body {
+    padding: 10px;
+}
+
