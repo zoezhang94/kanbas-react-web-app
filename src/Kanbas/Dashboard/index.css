@@ -1,17 +1,27 @@
-/* Style for card */
-.card {
-    max-height: 280px;
-    max-width: 350px;
+#cards-container {
+    margin-left: 20px;
+    column-gap: 20px;
+    row-gap: 20px;
 }
 
-/* Style for card image */
-.card-img-top {
-    height: 156px;
-    object-fit: cover;
+.wd-course-card .card {
+    width: 250px;
 }
 
-/* Style for card body */
-.card-body {
-    padding: 10px;
+.wd-color-image {
+    background-color: rgb(53, 74, 169);
+    height: 150px;
 }
 
+.wd-course-card .wd-card-title{
+    color: rgb(0, 0, 0);
+}
+
+.wd-course-card .wd-card-text{
+    color: gray;
+    text-decoration: none;
+}
+
+.wd-course-card a {
+    text-decoration: none;
+}
