@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 // import './App.css';
 import Labs from './Labs';
 import Kanbas from './Kanbas';
@@ -14,7 +13,7 @@ function App() {
     <HashRouter>
       <div>
         <Routes>
-          <Route path="/" element={<Navigate to="/Labs" />} />
+          <Route path="/" element={<Navigate to="/Labs/a5" />} />
           <Route path="/hello" element={<HelloWorld />} />
           <Route path="/labs/*" element={<Labs />} />
           <Route path="/kanbas/*" element={<Kanbas />} />
