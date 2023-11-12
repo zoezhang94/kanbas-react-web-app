@@ -4,7 +4,6 @@ export default function WorkingWithArrays() {
     const API = "http://localhost:4000/a5/todos";
     const [todos, setTodos] = useState([]);
     const [id, setId] = useState(1);
-    const [selectedTodoId, setSelectedTodoId] = useState(null);
     const [title, setTitle] = useState("Go to Work");
     const [todo, setTodo] = useState({
         id: 1,
@@ -23,12 +22,6 @@ export default function WorkingWithArrays() {
         fetchTodos();
     }, []);
 
-    const handleEditClick = (todoId) => {
-        setSelectedTodoId(todoId);
-        setId(id);
-
-    };
-
     const removeTodo = async (id) => {
         const response = await axios
             .get(`${API}/${id}/delete`);
@@ -40,6 +33,12 @@ export default function WorkingWithArrays() {
             .delete(`${API}/${id}`);
         setTodos(response.data);
     };
+
+    const fetchTodoById = async (id) => {
+        const response = await axios.get(`${API}/${id}`);
+        setTodo(response.data);
+    };
+
 
     const createTodo = async () => {
         const response = await axios.get(`${API}/create`);
@@ -58,12 +57,13 @@ export default function WorkingWithArrays() {
         setTodos(response.data);
     };
 
-    const updateTodo = async () => {
-        const response = await axios.put(
-            `${API}/${id}`,
-            { title: title });
-        setTodos(response.data);
-    };
+  const updateTodo = async () => {
+    const response = await axios.put(
+      `${API}/${todo.id}`, todo);
+    setTodos(todos.map((t) => (
+      t.id === todo.id ? todo : t)));
+    setTodo({});
+  };
 
     return (
         <div>
@@ -87,6 +87,16 @@ export default function WorkingWithArrays() {
             <button className="btn btn-success mb-2 w-100" onClick={() => updateTitle(id, title)}>
                 Update Title
             </button>
+            <input value={todo.id}
+                onChange={(e) => setTodo({
+                    ...todo,
+                    id: e.target.value
+                })} />
+            <input value={todo.title}
+                onChange={(e) => setTodo({
+                    ...todo,
+                    title: e.target.value
+                })} />
             <button className="btn btn-warning mb-2 w-100" onClick={postTodo} >
                 Post Todo
             </button>
@@ -106,10 +116,14 @@ export default function WorkingWithArrays() {
                             Delete
                         </button>
                         <button
-                            className="btn btn-warning me-2 float-end"
-                            onClick={() => handleEditClick(todo.id)}>
+                            onClick={() => fetchTodoById(todo.id)}
+                            className="btn btn-warning me-2 float-end" >
                             Edit
                         </button>
+                        <input
+                            checked={todo.completed}
+                            type="checkbox" readOnly
+                        />
                         {todo.title}
                     </li>
                 ))}
