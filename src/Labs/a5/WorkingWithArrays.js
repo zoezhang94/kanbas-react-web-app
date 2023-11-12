@@ -2,11 +2,17 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 export default function WorkingWithArrays() {
     const API = "http://localhost:4000/a5/todos";
-
     const [todos, setTodos] = useState([]);
     const [id, setId] = useState(1);
     const [selectedTodoId, setSelectedTodoId] = useState(null);
     const [title, setTitle] = useState("Go to Work");
+    const [todo, setTodo] = useState({
+        id: 1,
+        title: "NodeJS Assignment",
+        description: "Create a NodeJS server with ExpressJS",
+        due: "2021-09-09",
+        completed: false,
+    });
 
     const fetchTodos = async () => {
         const response = await axios.get(API);
@@ -116,11 +122,9 @@ export default function WorkingWithArrays() {
             <input
                 className="form-control"
                 value={id}
-                onChange={(e) => setId(
-                    e.target.value
-                )} />
-            <a href={`${API}/${id}}`}
-                className="btn btn-primary me-2">
+                onChange={(e) => setId(e.target.value)}
+            />
+            <a href={`${API}/${id}`} className="btn btn-primary me-2">
                 Get Todo by ID
             </a>
 
@@ -139,48 +143,66 @@ export default function WorkingWithArrays() {
             <h3>Deleting from an Array</h3>
 
             <input
-                value={todos.id}
-                onChange={(e) => setTodos({
-                    ...todos, id: e.target.value
+                value={todo.id}
+                onChange={(e) => setTodo({
+                    ...todo, id: e.target.value
                 })}
                 className="form-control mb-2"
                 type="number"
             />
-            <a href={`${API}/${todos.id}/delete`}
+            <h3>Deleting from an Array</h3>
+            <a href={`${API}/${todo.id}/delete`}
                 className="btn btn-primary me-2">
-                Delete Todo with ID = {todos.id}
+                Delete Todo with ID = {todo.id}
             </a>
+
             <h3>Updating an Item in an Array</h3>
             <input
-                className="form-control"
-                value={title}
-                onChange={(e) => setTitle(e.target.value)} />
-            <a href={`${API}/${todos.id}/title/${title}`}
-                className="btn btn-primary me-2">
-                Updating an Item in an Array
+                value={todo.id}
+                onChange={(e) => setTodo({
+                    ...todo, id: e.target.value
+                })}
+                className="form-control mb-2"
+                type="number"
+            />
+
+            <input
+                value={todo.title}
+                onChange={(e) => setTodo({
+                    ...todo, title: e.target.value
+                })}
+                className="form-control mb-2"
+                type="text"
+            />
+            <h3>Updating an Item in an Array</h3>
+            <a
+                href={`${API}/${todo.id}/title/${todo.title}`}
+                className="btn btn-primary me-2" >
+                Update Title to {todo.title}
             </a>
+
 
             <h4>Modifying todos Complete Status</h4>
             <input
-                value={todos.id}
-                onChange={(e) => setTodos({
-                    ...todos, id: e.target.value
+                value={todo.id}
+                onChange={(e) => setTodo({
+                    ...todo, id: e.target.value
                 })}
                 className="form-control mb-2"
                 type="number"
             />
             <input
-                onChange={(e) => setTodos({
-                    ...todos,
+                onChange={(e) => setTodo({
+                    ...todo,
                     completed: e.target.checked
                 })}
-                checked={todos.completed}
+                checked={todo.completed}
                 type="checkbox"
                 style={{ marginRight: '10px' }}
             />
 
             <a
-                href={`${API}/${todos.id}/completed/${todos.completed}`}
+                href={`${API}/${todo.id}/completed/${todo.completed}`}
                 className="btn btn-info "
             >
                 Confirm Completed
