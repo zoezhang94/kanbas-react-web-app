@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import { useParams, Routes, Route, Navigate, useLocation} from "react-router-dom";
 import CourseNavigation from "./CourseNavigation";
 import Modules from "./Modules";
@@ -7,14 +7,23 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import Grades from "./Grades";
 import {GrMenu} from "react-icons/gr";
+import * as client from "./client";
 
 function Courses({ courses }) {
     const { courseId } = useParams();
     const {pathname} = useLocation();
     //const [empty, kanbas, courses, id, screen] = pathname.split("/");
     const screen = pathname.split("/").pop();
+  const [course,setCourse] = React.useState({});
+  const fetchCourse = async () => {
+    const course = await client.fetchCourseById(courseId);
+    setCourse(course);
+  }
+  useEffect(() => {
+    fetchCourse();
+  }
+  , []);
 
-    const course = courses.find((course) => course._id === courseId);
     return (
       <div>
         <h5>
