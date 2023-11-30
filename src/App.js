@@ -5,6 +5,7 @@ import HelloWorld from './Labs/a3/HelloWorld';
 import { HashRouter } from 'react-router-dom';
 import { Routes, Route, Navigate } from "react-router";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Project from './project';
 
 
 function App() {
@@ -13,7 +14,8 @@ function App() {
     <HashRouter>
       <div>
         <Routes>
-          <Route path="/" element={<Navigate to="/Labs/a5" />} />
+          <Route path="/" element={<Navigate to="/project" />} />
+          <Route path="/project/*" element={<Project />} />
           <Route path="/hello" element={<HelloWorld />} />
           <Route path="/labs/*" element={<Labs />} />
           <Route path="/kanbas/*" element={<Kanbas />} />
