@@ -1,14 +1,14 @@
 import Home from "./home";
-import Login from "./login";
-import Profile from "./profile";
-import Signup from "./signup";
+import Signup from "./users/signup";
 import Search from "./search";
 import Details from "./details";
+import UsersList from "./users/list";
+import UserDatils from "./users/details";
 import { Routes, Route, Link } from "react-router-dom";
-import { useState } from "react";
+import SignIn from "./users/signIn";
+import Account from "./users/account";
 
 function Project() {
-    const [key, setKey] = useState('home');
     // process.env;
     return (
         <div className="container-fluid">
@@ -17,22 +17,25 @@ function Project() {
                 <div className="col-2">
                     <div className="list-group">
                         <Link to="/project/" className="list-group-item">Home</Link>
-                        <Link to="/project/login" className="list-group-item">Login</Link>
-                        <Link to="/project/profile" className="list-group-item">Profile</Link>
+                        <Link to="/project/signin" className="list-group-item">SignIn</Link>
+                        <Link to="/project/account" className="list-group-item">Account</Link>
                         <Link to="/project/signup" className="list-group-item">Signup</Link>
                         <Link to="/project/search" className="list-group-item">Search</Link>
-                        {/* <Link to="/project/details" className="list-group-item">Details</Link> */}
+                        <Link to="/project/users" className="list-group-item">Users</Link>
+
                     </div>
                 </div>
                 <div className="col-10">
                     <Routes>
                         <Route path="/" element={<Home />} />
-                        <Route path="/login" element={<Login />} />
-                        <Route path="/profile" element={<Profile />} />
+                        <Route path="/signin" element={<SignIn />} />
+                        <Route path="/account" element={<Account />} />
                         <Route path="/signup" element={<Signup />} />
                         <Route path="/search" element={<Search />} />
                         <Route path="/search/:searchTerm" element={<Search />} />
                         <Route path="/details/:movieId" element={<Details />} />
+                        <Route path="/users" element={< UsersList />} />
+                        <Route path="/users/:userId" element={<UserDatils />} />
                     </Routes>
                 </div>
             </div>
